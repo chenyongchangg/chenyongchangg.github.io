@@ -14,14 +14,6 @@ let closure_name = || {
 };
 ```
 
-
-* ||: This syntax replaces the parentheses used for regular functions, indicating an anonymous function.
-* closure_name: This is an optional identifier you can assign to the closure for reference.
-{ ... }: This block contains the code that will be executed when the closure is called.
-Capturing Environment
-
-Closures can capture variables from their surrounding scope by either borrowing (&) or taking ownership (move) of them. Here's a breakdown of the capture modes:
-
 ## By Immutable Reference (&T)
 The closure borrows the captured variable immutably. This allows the closure to read the variable's value but not modify it.
 
