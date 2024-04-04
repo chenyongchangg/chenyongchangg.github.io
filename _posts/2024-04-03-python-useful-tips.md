@@ -1,4 +1,4 @@
-# just see example
+# python useful code
 ```Python
 from collections import *
 
