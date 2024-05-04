@@ -6,7 +6,23 @@
         <description>Recent content in Tags on Hugo Theme Stack Starter</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 28 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://demo.stack.jimmycai.com/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 04 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://demo.stack.jimmycai.com/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Arc</title>
+        <link>https://demo.stack.jimmycai.com/tags/arc/</link>
+        <pubDate>Sat, 04 May 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://demo.stack.jimmycai.com/tags/arc/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Rust</title>
+        <link>https://demo.stack.jimmycai.com/tags/rust/</link>
+        <pubDate>Sat, 04 May 2024 00:00:00 +0000</pubDate>
+        
+        <guid>https://demo.stack.jimmycai.com/tags/rust/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Mvcc</title>
         <link>https://demo.stack.jimmycai.com/tags/mvcc/</link>
         <pubDate>Sun, 28 Apr 2024 00:00:00 +0000</pubDate>
