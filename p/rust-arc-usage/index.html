@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Create beautiful interactive image gallery using Markdown">
-<title>Image gallery</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="rust arc usage">
+<title>rust arc usage</title>
 
-<link rel='canonical' href='http://localhost:1313/p/image-gallery/'>
+<link rel='canonical' href='http://localhost:1313/p/rust-arc-usage/'>
 
-<link rel="stylesheet" href="/scss/style.min.8e60baf4cd3fc55968717a6e39762f4d28ed7ef6007566b6c7970ad0fe907198.css"><meta property='og:title' content="Image gallery">
-<meta property='og:description' content="Create beautiful interactive image gallery using Markdown">
-<meta property='og:url' content='http://localhost:1313/p/image-gallery/'>
+<link rel="stylesheet" href="/scss/style.min.8e60baf4cd3fc55968717a6e39762f4d28ed7ef6007566b6c7970ad0fe907198.css"><meta property='og:title' content="rust arc usage">
+<meta property='og:description' content="rust arc usage">
+<meta property='og:url' content='http://localhost:1313/p/rust-arc-usage/'>
 <meta property='og:site_name' content='Hugo Theme Stack Starter'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2023-08-26T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-08-26T00:00:00&#43;00:00'/><meta property='og:image' content='http://localhost:1313/p/image-gallery/2.jpg' />
-<meta name="twitter:title" content="Image gallery">
-<meta name="twitter:description" content="Create beautiful interactive image gallery using Markdown"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='http://localhost:1313/p/image-gallery/2.jpg' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='rust' /><meta property='article:tag' content='arc' /><meta property='article:published_time' content='2024-05-04T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-05-04T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="rust arc usage">
+<meta name="twitter:description" content="rust arc usage">
     <link rel="shortcut icon" href="/favicon.png" />
 
   
@@ -230,67 +229,23 @@
     </ol>
 </aside>
 
-    <aside class="sidebar right-sidebar sticky">
-        
-            
-                
-    <section class="widget archives">
-        <div class="widget-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <line x1="5" y1="9" x2="19" y2="9" />
-  <line x1="5" y1="15" x2="19" y2="15" />
-  <line x1="11" y1="4" x2="7" y2="20" />
-  <line x1="17" y1="4" x2="13" y2="20" />
-</svg>
-
-
-
-        </div>
-        <h2 class="widget-title section-title">Table of contents</h2>
-        
-        <div class="widget--toc">
-            <nav id="TableOfContents">
-  <ol>
-    <li><a href="#syntax">Syntax</a></li>
-    <li><a href="#result">Result</a></li>
-  </ol>
-</nav>
-        </div>
-    </section>
-
-            
-        
-    </aside>
-
+    
 
             <main class="main full-width">
-    <article class="has-image main-article">
+    <article class="main-article">
     <header class="article-header">
-        <div class="article-image">
-            <a href="/p/image-gallery/">
-                <img src="/p/image-gallery/2_hubce42636ecacc1a380b462f3110efcec_37455_800x0_resize_q75_box.jpg"
-                        srcset="/p/image-gallery/2_hubce42636ecacc1a380b462f3110efcec_37455_800x0_resize_q75_box.jpg 800w, /p/image-gallery/2_hubce42636ecacc1a380b462f3110efcec_37455_1600x0_resize_q75_box.jpg 1600w"
-                        width="800" 
-                        height="1200" 
-                        loading="lazy"
-                        alt="Featured image of post Image gallery" />
-                
-            </a>
-        </div>
-    
 
     <div class="article-details">
     
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/image-gallery/">Image gallery</a>
+            <a href="/p/rust-arc-usage/">rust arc usage</a>
         </h2>
     
         
         <h3 class="article-subtitle">
-            Create beautiful interactive image gallery using Markdown
+            rust arc usage
         </h3>
         
     </div>
@@ -311,7 +266,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Aug 26, 2023</time>
+                <time class="article-time--published">May 04, 2024</time>
             </div>
         
 
@@ -341,63 +296,136 @@
     <section class="article-content">
     
     
-    <p>Hugo theme Stack supports the creation of interactive image galleries using Markdown. It&rsquo;s powered by <a class="link" href="https://photoswipe.com/"  target="_blank" rel="noopener"
-    >PhotoSwipe</a> and its syntax was inspired by <a class="link" href="https://typlog.com/"  target="_blank" rel="noopener"
-    >Typlog</a>.</p>
-<p>To use this feature, the image must be in the same directory as the Markdown file, as it uses Hugo&rsquo;s page bundle feature to read the dimensions of the image. <strong>External images are not supported.</strong></p>
-<h2 id="syntax">
-    <a href="#syntax">#</a>
-    Syntax
-</h2><div class="highlight"><div class="chroma">
+    <p>在Rust中，Arc是一个类型，代表&quot;原子引用计数&quot;（Atomic Reference Counting）。它允许在多个所有者之间共享数据，并在运行时跟踪数据的引用计数，以便在不再需要时自动释放内存。</p>
+<p>以下是 Arc 的基本用法：</p>
+<p>导入Arc模块：</p>
+<div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">![<span class="nt">Image 1</span>](<span class="na">1.jpg</span>) ![<span class="nt">Image 2</span>](<span class="na">2.jpg</span>)
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="line"><span class="cl"><span class="k">use</span><span class="w"> </span><span class="n">std</span>::<span class="n">sync</span>::<span class="n">Arc</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="result">
-    <a href="#result">#</a>
-    Result
-</h2><p><img src="/p/image-gallery/1.jpg"
-	width="2000"
-	height="1400"
-	srcset="/p/image-gallery/1_hudd2e8259c20ed0dcaa856c253552e90f_14625_480x0_resize_q75_box.jpg 480w, /p/image-gallery/1_hudd2e8259c20ed0dcaa856c253552e90f_14625_1024x0_resize_q75_box.jpg 1024w"
-	loading="lazy"
-	
-		alt="Image 1"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="142"
-		data-flex-basis="342px"
-	
-> <img src="/p/image-gallery/2.jpg"
-	width="1500"
-	height="2250"
-	srcset="/p/image-gallery/2_hubce42636ecacc1a380b462f3110efcec_37455_480x0_resize_q75_box.jpg 480w, /p/image-gallery/2_hubce42636ecacc1a380b462f3110efcec_37455_1024x0_resize_q75_box.jpg 1024w"
-	loading="lazy"
-	
-		alt="Image 2"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="66"
-		data-flex-basis="160px"
-	
-></p>
-<blockquote>
-<p>Photo by <a class="link" href="https://unsplash.com/@mymind"  target="_blank" rel="noopener"
-    >mymind</a> and <a class="link" href="https://unsplash.com/@lukechesser"  target="_blank" rel="noopener"
-    >Luke Chesser</a> on <a class="link" href="https://unsplash.com/"  target="_blank" rel="noopener"
-    >Unsplash</a></p>
-</blockquote>
+</div><p>创建Arc实例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="line"><span class="cl"><span class="kd">let</span><span class="w"> </span><span class="n">shared_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Arc</span>::<span class="n">new</span><span class="p">(</span><span class="n">data</span><span class="p">);</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>这将创建一个指向data的Arc实例。data是你想要共享的数据。</p>
+<p>克隆Arc实例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="line"><span class="cl"><span class="kd">let</span><span class="w"> </span><span class="n">cloned_shared_data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Arc</span>::<span class="n">clone</span><span class="p">(</span><span class="o">&amp;</span><span class="n">shared_data</span><span class="p">);</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>这将创建一个新的Arc实例，指向相同的底层数据。Arc::clone不会产生深拷贝，而只会增加引用计数。</p>
+<p>你可以将Arc实例传递给多个线程或函数，并在需要时使用其内部数据。由于Arc是不可变的，因此在并发情况下可以安全地共享。</p>
+<p>在需要时减少引用计数：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="line"><span class="cl"><span class="nb">drop</span><span class="p">(</span><span class="n">shared_data</span><span class="p">);</span><span class="w"> </span><span class="c1">// 或者在作用域结束时自动减少引用计数
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>当不再需要某个Arc实例时，可以调用drop函数手动减少引用计数。当引用计数为0时，内部数据将被释放。</p>
+<p>Arc是一个非常有用的工具，特别是在需要在多个所有者之间共享数据时，但又需要确保线程安全性的情况下。</p>
+<p>让我们创建一个简单的例子来说明如何在Rust中使用Arc来共享数据。假设我们有一个简单的计数器，多个线程将并发地增加其值，我们将使用Arc来确保线程安全。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-rust" data-lang="rust"><span class="line"><span class="cl"><span class="k">use</span><span class="w"> </span><span class="n">std</span>::<span class="n">sync</span>::<span class="p">{</span><span class="n">Arc</span><span class="p">,</span><span class="w"> </span><span class="n">Mutex</span><span class="p">};</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">use</span><span class="w"> </span><span class="n">std</span>::<span class="n">thread</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">fn</span> <span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">// 创建一个共享的计数器
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">let</span><span class="w"> </span><span class="n">counter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Arc</span>::<span class="n">new</span><span class="p">(</span><span class="n">Mutex</span>::<span class="n">new</span><span class="p">(</span><span class="mi">0</span><span class="p">));</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">handles</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="fm">vec!</span><span class="p">[];</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">_</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="mi">0</span><span class="o">..</span><span class="mi">10</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// 克隆 Arc 实例以便在不同的线程中使用
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="n">counter_clone</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Arc</span>::<span class="n">clone</span><span class="p">(</span><span class="o">&amp;</span><span class="n">counter</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// 启动新线程，每个线程增加计数器的值
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">        </span><span class="kd">let</span><span class="w"> </span><span class="n">handle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">thread</span>::<span class="n">spawn</span><span class="p">(</span><span class="k">move</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="c1">// 获取互斥锁，以便安全地修改计数器的值
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">            </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">counter_clone</span><span class="p">.</span><span class="n">lock</span><span class="p">().</span><span class="n">unwrap</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="o">*</span><span class="n">data</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">});</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// 将线程句柄保存到向量中，以便稍后等待所有线程完成
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">        </span><span class="n">handles</span><span class="p">.</span><span class="n">push</span><span class="p">(</span><span class="n">handle</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// 等待所有线程完成
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">handle</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">handles</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">handle</span><span class="p">.</span><span class="n">join</span><span class="p">().</span><span class="n">unwrap</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">// 打印计数器的最终值
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">&#34;Final counter value: </span><span class="si">{}</span><span class="s">&#34;</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">counter</span><span class="p">.</span><span class="n">lock</span><span class="p">().</span><span class="n">unwrap</span><span class="p">());</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>在这个例子中，我们首先创建了一个Arc，其中包含一个Mutex，以确保在并发情况下访问计数器时的线程安全性。然后，我们创建了10个线程，每个线程都会增加计数器的值。在每个线程内部，我们通过获取互斥锁来访问计数器，并且在增加计数器值之后释放锁。最后，我们等待所有线程完成，并打印计数器的最终值。</p>
+<p>使用Arc和Mutex的组合可以确保数据的安全共享和修改，因为它允许多个线程访问共享数据，但只允许一个线程在任何给定时间修改数据。</p>
 
 </section>
 
 
     <footer class="article-footer">
     
+    <section class="article-tags">
+        
+            <a href="/tags/rust/">Rust</a>
+        
+            <a href="/tags/arc/">Arc</a>
+        
+    </section>
+
 
     
     <section class="article-copyright">
@@ -421,7 +449,7 @@
 
 
         <span>
-            Last updated on Aug 26, 2023 00:00 UTC
+            Last updated on May 04, 2024 00:00 UTC
         </span>
     </section></footer>
 
