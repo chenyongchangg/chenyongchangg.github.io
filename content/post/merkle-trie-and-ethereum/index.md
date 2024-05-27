@@ -3,7 +3,7 @@ title: Merkle Trie And Ethereum
 description: 数据完整性是通信协议需要考虑的基本问题之一。 数据存储于硬盘中、将在网络中传输，应时时刻刻保证数据的完整性。区块链程序更是如此。
 date: 2024-05-27 00:00:00+0000
 math: true
-image: Picture30.png,Picture31.png,Picture32.png,
+image: Picture30.png
 ---
 Merkle树和 Merkle证明
 数据完整性是通信协议需要考虑的基本问题之一。 数据存储于硬盘中、将在网络中传输，应时时刻刻保证数据的完整性。区块链程序更是如此。

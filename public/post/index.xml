@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Posts on Hugo Theme Stack Starter</title>
-        <link>http://localhost:36581/post/</link>
+        <link>http://localhost:1313/post/</link>
         <description>Recent content in Posts on Hugo Theme Stack Starter</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 07 Sep 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:36581/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 27 May 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Hello World</title>
-        <link>http://localhost:36581/p/hello-world/</link>
+        <link>http://localhost:1313/p/hello-world/</link>
         <pubDate>Sun, 06 Mar 2022 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:36581/p/hello-world/</guid>
-        <description>&lt;img src="http://localhost:36581/p/hello-world/cover.jpg" alt="Featured image of post Hello World" /&gt;&lt;p&gt;Welcome to Hugo theme Stack. This is your first post. Edit or delete it, then start writing!&lt;/p&gt;
+        <guid>http://localhost:1313/p/hello-world/</guid>
+        <description>&lt;img src="http://localhost:1313/p/hello-world/cover.jpg" alt="Featured image of post Hello World" /&gt;&lt;p&gt;Welcome to Hugo theme Stack. This is your first post. Edit or delete it, then start writing!&lt;/p&gt;
 &lt;p&gt;For more information about this theme, check the documentation: &lt;a class=&#34;link&#34; href=&#34;https://stack.jimmycai.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://stack.jimmycai.com/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Want a site like this? Check out &lt;a class=&#34;link&#34; href=&#34;https://github.com/CaiJimmy/hugo-theme-stack-starter&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -25,11 +25,114 @@
 </description>
         </item>
         <item>
+        <title>Merkle Trie And Ethereum</title>
+        <link>http://localhost:1313/p/merkle-trie-and-ethereum/</link>
+        <pubDate>Mon, 27 May 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/p/merkle-trie-and-ethereum/</guid>
+        <description>&lt;img src="http://localhost:1313/Picture30.png,Picture31.png,Picture32.png," alt="Featured image of post Merkle Trie And Ethereum" /&gt;&lt;p&gt;Merkle树和 Merkle证明
+数据完整性是通信协议需要考虑的基本问题之一。 数据存储于硬盘中、将在网络中传输，应时时刻刻保证数据的完整性。区块链程序更是如此。&lt;/p&gt;
+&lt;p&gt;如果一组数据量不大的话，例如我们有 a1
+、 a2
+、 a3
+三个数据要传输， 发送方可以用串联数据片段并执行哈希，得到一个校验值 h，如下所示。&lt;/p&gt;
+&lt;p&gt;h=hash(a1+a2+a3)&lt;/p&gt;
+&lt;p&gt;在收到数据后，接收方进行相同形式的串联，并按同样的哈希函数计算，比较哈希值是否一致就可知数据是否完整。&lt;/p&gt;
+&lt;p&gt;h′=hash(a1+a2+a3)&lt;/p&gt;
+&lt;p&gt;但这个思路存在一定的效率问题。&lt;/p&gt;
+&lt;p&gt;在于当数据量比较大时候，例如有 a1
+、 a2
+、 a3
+… a100
+的数据片段的时候， 我们往往分批传输这些小块，每次只要有一小部分数据损坏，整个数据校验和便无法对应上， 我们也不知道过程中哪个小块错误了，导致我们重传整组数据，这是非常耗时的。 如果能将数据进一步细分成小组，对小组做校验和，再将小组与小组组合成大组做校验和，将能方便地解决上述问题。&lt;/p&gt;
+&lt;p&gt;Merkle树是一个在密码学中常使用的树形结构，适用于解决数据完整性问题。 它的结构功能异常简单，通常我们用二叉树的形式来表示一棵 Merkle树， 它存在的作用是数据分组并保证数据在存储中的完整性。 例如一棵包含了数字 1 到 8 的 Merkle二叉树，如图 4-4 所示。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/merkle-trie-and-ethereum/Picture30.png&#34;
+	width=&#34;812&#34;
+	height=&#34;449&#34;
+	srcset=&#34;http://localhost:1313/p/merkle-trie-and-ethereum/Picture30_hud98ad0923847fc4f16608cc3f72c3a8b_72408_480x0_resize_box_3.png 480w, http://localhost:1313/p/merkle-trie-and-ethereum/Picture30_hud98ad0923847fc4f16608cc3f72c3a8b_72408_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 2&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;180&#34;
+		data-flex-basis=&#34;434px&#34;
+	
+&gt;
+一棵包含了数字1到8的Merkle二叉树&lt;/p&gt;
+&lt;p&gt;在图中的 Merkle树里，我们一共持有8个基础数据， 1 到 8 ，它们两两分组形成最初的小组。&lt;/p&gt;
+&lt;p&gt;例如数据 1 与数据 2 ，它们分在一组中，并计算它们串联后的哈希值 H1=hash(1,2)
+，&lt;/p&gt;
+&lt;p&gt;同理将数据 3 与数据 4 串联的串联哈希值计算为 H2
+，依次类推，形成第二层的树中节点。&lt;/p&gt;
+&lt;p&gt;之后再将第二层的树中节点H1
+~ H4
+两两分组。例如 (H1
+与H2
+串联计算第三层的哈希值H5
+)。&lt;/p&gt;
+&lt;p&gt;逐层聚合反复递归，执行哈希计算。直到的仅剩下一个哈希值节点：根节点哈希值 Root ，该过程完毕。&lt;/p&gt;
+&lt;p&gt;如果碰上基础数据集不是偶数个元素（例如仅有7个数据），则复制一个元素，让它与自己的双胞胎做哈希运算。&lt;/p&gt;
+&lt;p&gt;由此我们可以推论：Merkle树的树叶都是数据、树中的节点都是哈希值。&lt;/p&gt;
+&lt;p&gt;那么，Merkle树如何提升了校验效率呢？&lt;/p&gt;
+&lt;p&gt;Merkle树的精妙在于它将一个庞大的数据集分散成组。&lt;/p&gt;
+&lt;p&gt;在网络传输的过程中，仅需逐步传送各个小组，并执行组合校验，再逐步传送，直到拼接完成整个数据集。 过程中若有任何数据传送出差错，仅需重传那个小分组。 如果数据集中的一个值在传输中被损毁，会影响该数据所在的整个分支、子树、到根节点的哈希值，方便我们快速定位出错点。 如图 4-5 所示，我们修改数据4为44后，相应路径直到根节点哈希都会产生变化。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/merkle-trie-and-ethereum/Picture31.png&#34;
+	width=&#34;924&#34;
+	height=&#34;512&#34;
+	srcset=&#34;http://localhost:1313/p/merkle-trie-and-ethereum/Picture31_hu7b07f1057f0574a3546826b6f98ab42b_113815_480x0_resize_box_3.png 480w, http://localhost:1313/p/merkle-trie-and-ethereum/Picture31_hu7b07f1057f0574a3546826b6f98ab42b_113815_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 2&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;180&#34;
+		data-flex-basis=&#34;433px&#34;
+	
+&gt;
+修改数据4为数据44后，相应的路径直到根节点哈希都发生了变化&lt;/p&gt;
+&lt;p&gt;Merkle树的应用场景在哪里呢？&lt;/p&gt;
+&lt;p&gt;Merkle树最实用的两个场景，其一是当比较两份大数据时，可以从根节点上就直接判断出两份数据是否相同（哪怕一个子数据不同，根节点的哈希值都不同）。&lt;/p&gt;
+&lt;p&gt;其二是可以做 “Merkle证明”，即在整棵树尚未 完整下载 的情况下，仅通过下载的部分数据来进行完整性校验，快速判断某数据小组是否在其应处的位置，举例如图 4-6 所示。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/merkle-trie-and-ethereum/Picture32.png&#34;
+	width=&#34;974&#34;
+	height=&#34;650&#34;
+	srcset=&#34;http://localhost:1313/p/merkle-trie-and-ethereum/Picture32_hu8ee5faef49f992d9dc0246cb418d6f8f_132097_480x0_resize_box_3.png 480w, http://localhost:1313/p/merkle-trie-and-ethereum/Picture32_hu8ee5faef49f992d9dc0246cb418d6f8f_132097_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Image 2&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;149&#34;
+		data-flex-basis=&#34;359px&#34;
+	
+&gt;
+Merkle证明数据64有效存在于该棵树中&lt;/p&gt;
+&lt;p&gt;在这里我们有一组份数据包含了8个元素，依次是 [5,27,18,64,30,2,43,48] ，当我们在传输过程中收到了数据 64 ，我们如何才能在其他数据尚未送达之前，证明以下两点？：&lt;/p&gt;
+&lt;p&gt;数据 64 的确存在于这组组数据中。
+数据 64 存在的位置是第4格（第四顺位）。
+按照 Merkle证明 ，我们仅需知晓4个哈希值即可作出证明。&lt;/p&gt;
+&lt;p&gt;数字 64 的相邻数字 18 的哈希值 (图中为 1FXq)
+相邻分组 [5, 27] 的联合哈希值 (图中为 ec20)
+相邻分支的哈希值 (图中为 8f74)
+根节点哈希值 (图中为 6c0a)
+证明推导过程如下：&lt;/p&gt;
+&lt;p&gt;我们计算得出 64 的哈希值为 9Dog，将结果与哈希值 1FXq 串联，计算得出联合哈希值 781a。&lt;/p&gt;
+&lt;p&gt;重复上述过程，将 781a 与 ec20 串联，计算得出联合哈希值 5c71。&lt;/p&gt;
+&lt;p&gt;重复上述过程，将 5c71 与 8f74 串联，计算出根哈希值 6c0a。&lt;/p&gt;
+&lt;p&gt;若根哈希值与我们从数据发送方传来的值 6c0a 对比，相等，则证明完毕。&lt;/p&gt;
+&lt;p&gt;在整个校验过程中，我们并没有下载任何其他的数据，仅通过哈希值就能鉴别数据 64 的位置以及是否存在，是一种极其高效的方式，且可以横向扩展到任意大数量的数据集。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Markdown Syntax Guide</title>
-        <link>http://localhost:36581/p/markdown-syntax-guide/</link>
+        <link>http://localhost:1313/p/markdown-syntax-guide/</link>
         <pubDate>Thu, 07 Sep 2023 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:36581/p/markdown-syntax-guide/</guid>
+        <guid>http://localhost:1313/p/markdown-syntax-guide/</guid>
         <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;
 &lt;h2 id=&#34;headings&#34;&gt;
     &lt;a href=&#34;#headings&#34;&gt;#&lt;/a&gt;
@@ -272,11 +375,11 @@
         </item>
         <item>
         <title>Image gallery</title>
-        <link>http://localhost:36581/p/image-gallery/</link>
+        <link>http://localhost:1313/p/image-gallery/</link>
         <pubDate>Sat, 26 Aug 2023 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:36581/p/image-gallery/</guid>
-        <description>&lt;img src="http://localhost:36581/p/image-gallery/2.jpg" alt="Featured image of post Image gallery" /&gt;&lt;p&gt;Hugo theme Stack supports the creation of interactive image galleries using Markdown. It&amp;rsquo;s powered by &lt;a class=&#34;link&#34; href=&#34;https://photoswipe.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>http://localhost:1313/p/image-gallery/</guid>
+        <description>&lt;img src="http://localhost:1313/p/image-gallery/2.jpg" alt="Featured image of post Image gallery" /&gt;&lt;p&gt;Hugo theme Stack supports the creation of interactive image galleries using Markdown. It&amp;rsquo;s powered by &lt;a class=&#34;link&#34; href=&#34;https://photoswipe.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;PhotoSwipe&lt;/a&gt; and its syntax was inspired by &lt;a class=&#34;link&#34; href=&#34;https://typlog.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Typlog&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;To use this feature, the image must be in the same directory as the Markdown file, as it uses Hugo&amp;rsquo;s page bundle feature to read the dimensions of the image. &lt;strong&gt;External images are not supported.&lt;/strong&gt;&lt;/p&gt;
@@ -294,10 +397,10 @@
 &lt;/div&gt;&lt;h2 id=&#34;result&#34;&gt;
     &lt;a href=&#34;#result&#34;&gt;#&lt;/a&gt;
     Result
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:36581/p/image-gallery/1.jpg&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/image-gallery/1.jpg&#34;
 	width=&#34;2000&#34;
 	height=&#34;1400&#34;
-	srcset=&#34;http://localhost:36581/p/image-gallery/1_hudd2e8259c20ed0dcaa856c253552e90f_14625_480x0_resize_q75_box.jpg 480w, http://localhost:36581/p/image-gallery/1_hudd2e8259c20ed0dcaa856c253552e90f_14625_1024x0_resize_q75_box.jpg 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/image-gallery/1_hudd2e8259c20ed0dcaa856c253552e90f_14625_480x0_resize_q75_box.jpg 480w, http://localhost:1313/p/image-gallery/1_hudd2e8259c20ed0dcaa856c253552e90f_14625_1024x0_resize_q75_box.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Image 1&#34;
@@ -307,10 +410,10 @@
 		data-flex-grow=&#34;142&#34;
 		data-flex-basis=&#34;342px&#34;
 	
-&gt; &lt;img src=&#34;http://localhost:36581/p/image-gallery/2.jpg&#34;
+&gt; &lt;img src=&#34;http://localhost:1313/p/image-gallery/2.jpg&#34;
 	width=&#34;1500&#34;
 	height=&#34;2250&#34;
-	srcset=&#34;http://localhost:36581/p/image-gallery/2_hubce42636ecacc1a380b462f3110efcec_37455_480x0_resize_q75_box.jpg 480w, http://localhost:36581/p/image-gallery/2_hubce42636ecacc1a380b462f3110efcec_37455_1024x0_resize_q75_box.jpg 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/image-gallery/2_hubce42636ecacc1a380b462f3110efcec_37455_480x0_resize_q75_box.jpg 480w, http://localhost:1313/p/image-gallery/2_hubce42636ecacc1a380b462f3110efcec_37455_1024x0_resize_q75_box.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Image 2&#34;
@@ -331,11 +434,11 @@
         </item>
         <item>
         <title>Shortcodes</title>
-        <link>http://localhost:36581/p/shortcodes/</link>
+        <link>http://localhost:1313/p/shortcodes/</link>
         <pubDate>Fri, 25 Aug 2023 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:36581/p/shortcodes/</guid>
-        <description>&lt;img src="http://localhost:36581/p/shortcodes/cover.jpg" alt="Featured image of post Shortcodes" /&gt;&lt;p&gt;For more details, check out the &lt;a class=&#34;link&#34; href=&#34;https://stack.jimmycai.com/writing/shortcodes&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <guid>http://localhost:1313/p/shortcodes/</guid>
+        <description>&lt;img src="http://localhost:1313/p/shortcodes/cover.jpg" alt="Featured image of post Shortcodes" /&gt;&lt;p&gt;For more details, check out the &lt;a class=&#34;link&#34; href=&#34;https://stack.jimmycai.com/writing/shortcodes&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;documentation&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&#34;bilibili-video&#34;&gt;
     &lt;a href=&#34;#bilibili-video&#34;&gt;#&lt;/a&gt;
@@ -428,10 +531,10 @@
         </item>
         <item>
         <title>Math Typesetting</title>
-        <link>http://localhost:36581/p/math-typesetting/</link>
+        <link>http://localhost:1313/p/math-typesetting/</link>
         <pubDate>Thu, 24 Aug 2023 00:00:00 +0000</pubDate>
         
-        <guid>http://localhost:36581/p/math-typesetting/</guid>
+        <guid>http://localhost:1313/p/math-typesetting/</guid>
         <description>&lt;p&gt;Stack has built-in support for math typesetting using &lt;a class=&#34;link&#34; href=&#34;https://katex.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;KaTeX&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;It&amp;rsquo;s not enabled by default side-wide,&lt;/strong&gt; but you can enable it for individual posts by adding &lt;code&gt;math: true&lt;/code&gt; to the front matter. Or you can enable it side-wide by adding &lt;code&gt;math = true&lt;/code&gt; to the &lt;code&gt;params.article&lt;/code&gt; section in &lt;code&gt;config.toml&lt;/code&gt;.&lt;/p&gt;
